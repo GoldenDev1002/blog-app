@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+    <nav>
+        <div id="navDiv">
+        <div id="img_holder">
+         <h1 id="title">BlogSpot</h1>
+        </div>
+        <div id="links_holder">
+            <ul>
+                <li><a href="" class="eachLink">Home</a></li>
+                <li><a href="/createBlog" class="eachLink">Create</a></li>
+                <li><a href="" class="eachLink">Login</a></li>
+              
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <h1 class="title"> Home Page</h1>
+   
+
+    <div>
+
+
+     <div id="taskFiles">
+       
+     </div>
+     <div id="allTasks">
+    <% if (allTasks.length > 0){ %>
+        <% allTasks.forEach( (eachTask)=> { %>
+            <div class = "eachTask">
+         
+     <a href= "/api/v1/tasks/<%= eachTask._id %>"><h1> <%= eachTask.name %></h1></a>
+     <button id="myButton" data-doc="<%= eachTask._id %>">Delete</button>
+      <div class ="line"></div>
+            <% })%>
+           
+        
+        </div>
+        <br/>
+        <% } %>
+     </div>
+   
+       
+
+    </div>
+    <script>
+
+    let myBtn = document.getElementById("myButton");
+    myBtn.addEventListener("click", function(e){
+        let datas = myBtn.dataset.doc;
+        console.log(datas);
+    
+      let url = `/api/v1/tasks/${myBtn.dataset.doc}`;
+      fetch(url, {
+        method: "delete"
+      })
+      .then(response => response.json())
+ .then(data => window.location.href = data.redirect) //returns the URL of the current page
+ .catch(err => console.log(err));
+
+      })
+    
+
+
+    </script>
+</body>
+</html>

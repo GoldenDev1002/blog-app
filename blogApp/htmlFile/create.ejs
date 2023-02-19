@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Create Post</title>
+</head>
+<body>
+    <div id="navDiv">
+        <div id="img_holder">
+         <h1 id="title">BlogSpot</h1>
+        </div>
+        <div id="links_holder">
+            <ul>
+                <li><a href="/api/v1/tasks/allTask" class="eachLink">Home</a></li>
+                <li><a href="/api/v1/tasks/createBlog" class="eachLink">Create</a></li>
+                <li><a href="" class="eachLink">Login</a></li>
+              
+            </ul>
+        </div>
+        </div>
+    <h1 class="title">Create Post</h1>
+    <form id="myForm" action = "/api/v1/tasks/createBlog" method="post">
+
+
+        <input type="text" id="field1" name="name">
+        <input type="text" id="field2" name="completed">
+        <input type="file">
+       
+        
+        <button id="myButton" data-id="postBtn">Click me</button>
+        </form>
+
+
+</body>
+<script>
+    let form = document.getElementById("#myForm");
+    let button = document.getElementById("myButton");
+    myForm.addEventListener("click", function(e){
+        e.preventDefault();
+   
+
+    })
+</script>
+</html>
