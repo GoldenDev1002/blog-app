@@ -21,7 +21,7 @@ let createTasks = async (req, res)=> {
        )
         createTask.save()
         .then((connect)=> {
-            res.status(201).json({connect})
+            res.status(201).json({connect}).redirect("/api/v1/tasks/allTask");
             //render("taskManager",{blog: connect})
         })
         }catch(err){

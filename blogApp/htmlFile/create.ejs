@@ -22,7 +22,7 @@
         </div>
         </div>
     <h1 class="title">Create Post</h1>
-    <form id="myForm" action = "/api/v1/tasks/createBlog" method="post">
+    <form id="myForm" action = "/api/v1/tasks/allTask" method="post">
 
 
         <input type="text" id="field1" name="name">
@@ -30,18 +30,13 @@
         <input type="file">
        
         
+        
         <button id="myButton" data-id="postBtn">Click me</button>
         </form>
 
 
 </body>
 <script>
-    let form = document.getElementById("#myForm");
-    let button = document.getElementById("myButton");
-    myForm.addEventListener("click", function(e){
-        e.preventDefault();
    
-
-    })
 </script>
 </html>

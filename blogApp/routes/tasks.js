@@ -13,8 +13,8 @@ const {getAllTasks,
 
 
 //route chaining
-    router.route("/allTask").get(getAllTasks)
-    router.route("/createBlog").get(createTaskPage).post(createTasks);
+    router.route("/allTask").get(getAllTasks).post(createTasks);
+    
 router.route("/:id").get(getTask).patch(updateTask).delete(deleteTask);
 
 
