@@ -64,10 +64,10 @@ let deletTask2 = async (req, res)=> {
 let deleteTask =  (req, res)=>{
     const id = req.params.id;
 
-    //find each document by its individual id and delete it
+    //fing each document by its individual id and delete it
     Tasks.findByIdAndDelete(id)
     .then(result => {
-        //WHEN WE SEND A REQUEST BY THE FETCH API, IT CANNOT BE REDIRECTED IN NODE UNLESS D DATA IS CONVERTED TO JSON AND REDIRECTED BACK TO THE BROWSER
+        //WHEN WE SEWND A REQUEST BY THE FETCH API, IT CANNOT BE REDIRECTED IN NODE UNLESS D DATA IS CONVERTED TO JSON AND REDIRECTED BACK TO THE BROWSER
      //redirecting to the allblogs page after a blog has been deleted
      res.json({redirect:"/api/v1/tasks/allTask"})   
     })

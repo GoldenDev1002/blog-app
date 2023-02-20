@@ -16,7 +16,7 @@
         </div>
         <div id="links_holder">
             <ul>
-                <li><a href="" class="eachLink">Home</a></li>
+                <li><a href="/api/v1/tasks/allTasks" class="eachLink">Home</a></li>
                 <li><a href="/createBlog" class="eachLink">Create</a></li>
                 <li><a href="" class="eachLink">Login</a></li>
               
@@ -31,6 +31,15 @@
 
 
      <div id="taskFiles">
+
+        <h3 class="title">Create Post</h3>
+    <form id="myForm" action = "/api/v1/tasks/allTask" method="post">
+
+
+        <input type="text" id="field1" name="name">
+        
+        <button id="myButtons" data-id="postBtn">Click me</button>
+        </form>
        
      </div>
      <div id="allTasks">
@@ -39,7 +48,7 @@
             <div class = "eachTask">
          
      <a href= "/api/v1/tasks/<%= eachTask._id %>"><h1> <%= eachTask.name %></h1></a>
-     <button id="myButton" data-doc="<%= eachTask._id %>">Delete</button>
+     <button id="deleteButton" data-doc="<%= eachTask._id %>">Delete</button>
       <div class ="line"></div>
             <% })%>
            

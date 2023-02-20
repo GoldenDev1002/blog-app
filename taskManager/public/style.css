@@ -1,16 +1,18 @@
 *{
     box-sizing: border-box;
     
+    
 }
 body{
     background: rgba(228, 228, 241, 0.648);
-    margin:0%;
+    margin:0px;
     position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 nav{
-    background-color: white;
-    width: 100%;
+    background-color: rgba(228, 228, 241, 0.648);
+    width: 109%;
     border-bottom: 1px solid rgba(128, 128, 128, 0.219);
 
 }
@@ -83,6 +85,7 @@ input[type="text"]{
     flex-direction: column;
     position: relative;
     top: 80px;
+    width: 90%;
    
 }
 
@@ -93,12 +96,12 @@ input[type="text"]{
 }
 
 .eachTask{
-    background-color: white;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    width: 200px;
-    height: auto;
+    background-color: rgb(253, 253, 253);
+    text-indent: 3%;
+    width: 600px;
+    height: 200px;
     position: absolute;
+
    
   
 }
@@ -112,20 +115,16 @@ input[type="text"]{
 .title{
     margin: 0 35%;
     position: relative;
-    top: -30px;
+    top: 70px;
 
 }
 
-#myButton{
-    background-color: red;
-    color: white;
-    padding: .35rem;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
+#task_title{
+    margin: 10px 35%;
     position: relative;
-    top: 30%;
-    left: 70%;
+    top: -20px;
+    font-size: 25px;
+    
 }
 
 #deleteButton{
@@ -136,17 +135,23 @@ input[type="text"]{
     cursor: pointer;
     border: none;
     position: relative;
-    top: 30%;
-    left: 50%;
+    top: -5%;
+    left: 70%;
 }
 
-
-
-#myButton:hover{
-    background-color: rgb(247, 102, 102);
+#submitButton{
+    background-color: rgb(255, 0, 255);
+    color: white;
+    padding: .35rem;
+    border-radius: 5px;
+    cursor: pointer;
     border: none;
-
+    position: relative;
+    top: 30%;
+    left: 105%;
 }
+
+
 
 #deleteButton:hover{
     background-color: rgb(247, 102, 102);
@@ -154,3 +159,34 @@ input[type="text"]{
 
 }
 
+#myButtons:hover{
+    background-color: rgb(250, 144, 250);
+    border: none;
+
+}
+
+#updateButton{
+    background-color: rgb(34, 0, 255);
+    color: white;
+    padding: .35rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    top: -5%;
+    left: 80%;
+}
+
+#errorDiv{
+    margin: 10px auto;
+    width: 500px;
+    height: 500px;
+}
+
+.fixedNav{
+    background-color: white;
+    width: 109%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.219);
+    position: fixed;
+    
+}

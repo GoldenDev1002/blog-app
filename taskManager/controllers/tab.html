@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .allSections.active{
+            visibility: visible;
+        }
+        .allSections{
+            visibility: hidden;
+        }
+        .tab_btn{
+         border-radius: 5px;
+         
+         color: rgb(0, 0, 0);   
+         cursor: pointer;
+         border: none;
+        }
+        .tab_btn.active{
+            background-color: green;
+         color: white; 
+        }
+
+        </style>
+</head>
+<body>
+    <main id="app">
+        <div id="btn-container">
+            <button class="tab_btn active" data-name="history">History</button>
+            <button class="tab_btn" data-name="video">Video</button>
+            <button class="tab_btn" data-name="music"> Music</button>
+        </div>
+
+        <section class="allSections active" id="history">
+            <h1>History</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sint nobis esse voluptatibus ad porro velit quas pariatur in aliquid quasi, aut vel ipsam molestiae. Id delectus aliquam atque voluptates?
+            Sed doloribus omnis cum quia fuga quo veniam beatae minima nesciunt vero repudiandae suscipit, accusantium necessitatibus quasi ipsa provident nobis. Vel exercitationem porro sint voluptates iusto iure possimus molestias quod?
+            Blanditiis recusandae nam hic necessitatibus officia magnam nobis laborum et nisi dolore tempora nulla molestias perspiciatis aspernatur reiciendis molestiae ex similique voluptatem illo asperiores voluptas, dolorem error. Excepturi, est laboriosam.
+            Perspiciatis consectetur, maxime, quod sed omnis minus sequi tempora, consequuntur eum nemo velit pariatur harum assumenda modi? Provident expedita explicabo debitis, repellat dolor pariatur dicta accusantium voluptate. Nihil, autem fugit.
+            Ipsam, exercitationem excepturi placeat quod quasi minima impedit, aliquam voluptatem nobis iure eaque possimus temporibus delectus sapiente? Quas inventore cupiditate porro id quam tenetur. Voluptatem, nihil? Sed odit non magni.
+            Doloremque optio numquam quaerat quibusdam voluptatem. Harum recusandae autem quaerat dolor! Quam hic eveniet commodi cupiditate nam. Aspernatur nobis possimus expedita ducimus autem? Omnis reiciendis ullam debitis reprehenderit pariatur eaque?
+            Quia facilis esse repudiandae dolor non quas nulla vitae quidem incidunt cumque molestias nobis velit eligendi pariatur, distinctio nemo fugiat soluta perspiciatis sapiente similique beatae officiis cum rem libero. Nisi.</p>
+        </section>
+        <section class="allSections" id="video">
+            <h1>Video</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sint nobis esse voluptatibus ad porro velit quas pariatur in aliquid quasi, aut vel ipsam molestiae. Id delectus aliquam atque voluptates?
+            Sed doloribus omnis cum quia fuga quo veniam beatae minima nesciunt vero repudiandae suscipit, accusantium necessitatibus quasi ipsa provident nobis. Vel exercitationem porro sint voluptates iusto iure possimus molestias quod?
+            Blanditiis recusandae nam hic necessitatibus officia magnam nobis laborum et nisi dolore tempora nulla molestias perspiciatis aspernatur reiciendis molestiae ex similique voluptatem illo asperiores voluptas, dolorem error. Excepturi, est laboriosam.
+            Perspiciatis consectetur, maxime, quod sed omnis minus sequi tempora, consequuntur eum nemo velit pariatur harum assumenda modi? Provident expedita explicabo debitis, repellat dolor pariatur dicta accusantium voluptate. Nihil, autem fugit.
+            Ipsam, exercitationem excepturi placeat quod quasi minima impedit, aliquam voluptatem nobis iure eaque possimus temporibus delectus sapiente? Quas inventore cupiditate porro id quam tenetur. Voluptatem, nihil? Sed odit non magni.
+            Doloremque optio numquam quaerat quibusdam voluptatem. Harum recusandae autem quaerat dolor! Quam hic eveniet commodi cupiditate nam. Aspernatur nobis possimus expedita ducimus autem? Omnis reiciendis ullam debitis reprehenderit pariatur eaque?
+            Quia facilis esse repudiandae dolor non quas nulla vitae quidem incidunt cumque molestias nobis velit eligendi pariatur, distinctio nemo fugiat soluta perspiciatis sapiente similique beatae officiis cum rem libero. Nisi.</p>
+        </section>
+        <section class="allSections" id="music">
+            <h1>Music</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sint nobis esse voluptatibus ad porro velit quas pariatur in aliquid quasi, aut vel ipsam molestiae. Id delectus aliquam atque voluptates?
+            Sed doloribus omnis cum quia fuga quo veniam beatae minima nesciunt vero repudiandae suscipit, accusantium necessitatibus quasi ipsa provident nobis. Vel exercitationem porro sint voluptates iusto iure possimus molestias quod?
+            Blanditiis recusandae nam hic necessitatibus officia magnam nobis laborum et nisi dolore tempora nulla molestias perspiciatis aspernatur reiciendis molestiae ex similique voluptatem illo asperiores voluptas, dolorem error. Excepturi, est laboriosam.
+            Perspiciatis consectetur, maxime, quod sed omnis minus sequi tempora, consequuntur eum nemo velit pariatur harum assumenda modi? Provident expedita explicabo debitis, repellat dolor pariatur dicta accusantium voluptate. Nihil, autem fugit.
+            Ipsam, exercitationem excepturi placeat quod quasi minima impedit, aliquam voluptatem nobis iure eaque possimus temporibus delectus sapiente? Quas inventore cupiditate porro id quam tenetur. Voluptatem, nihil? Sed odit non magni.
+            Doloremque optio numquam quaerat quibusdam voluptatem. Harum recusandae autem quaerat dolor! Quam hic eveniet commodi cupiditate nam. Aspernatur nobis possimus expedita ducimus autem? Omnis reiciendis ullam debitis reprehenderit pariatur eaque?
+            Quia facilis esse repudiandae dolor non quas nulla vitae quidem incidunt cumque molestias nobis velit eligendi pariatur, distinctio nemo fugiat soluta perspiciatis sapiente similique beatae officiis cum rem libero. Nisi.</p>
+        </section>
+
+        
+            <label for="name">Name</label>
+            <input type="text"  id="title"/>
+
+            <label for="blogs">Text</label>
+            <input type="text"  id="blogs"/>
+
+            <button id="sendBtn">Send</button>
+        
+    </main>
+
+    <script>
+        let about = document.getElementById('app');
+        let btns = document.querySelectorAll(".tab_btn");
+        let articles = document.querySelectorAll(".allSections");
+        let sendBtn = document.getElementById("sendBtn");
+        let title = document.getElementById("title").value;
+        let blogs = document.getElementById("blogs").value;
+
+        about.addEventListener("click", function(e){
+            let id = e.target.dataset.name;
+            if(id){
+                btns.forEach((btn)=> {
+                    btn.addEventListener("click", function(){
+                        btn.classList.remove("active");
+                        e.target.classList.add("active")
+
+
+                    articles.forEach((article)=> {
+                        article.classList.remove("active")
+                    })
+
+                    let element = document.getElementById(id);
+                    element.classList.add("active"); 
+
+                    })
+                })
+            }
+        })
+
+        sendBtn.addEventListener("click", function(){
+            let url = "http://localhost:4700/allShop"
+            fetch(url , {
+                method: "POST",
+                headers : {
+                    "Content-type" : "application/json"
+                },
+                body: JSON.stringify({
+                 title,
+                 blogs
+                })
+            })
+            .then((data)=>{
+               console.log(data)
+            })
+            .catch((err)=> {
+                console.log(err);
+            })
+        })
+    </script>
+</body>
+</html>

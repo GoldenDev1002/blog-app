@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+   <%-include('./partials/nav.ejs') %>
+    
+   
+
+   
+
+        <div id="taskFiles">
+
+            <h2 class="title">Create Task</h2>
+        <form id="myForm" action = "/api/v1/tasks/allTask" method="post">
+    
+    
+            <input type="text" id="field1" name="name">
+            
+            <button id="submitButton" data-id="postBtn">Click me</button>
+            </form>
+           
+         </div>
+         <h1 id="task_title">All Tasks</h1>
+     <div id="allTasks">
+       
+    <% if (allTasks.length > 0){ %>
+        <% allTasks.forEach( (eachTask)=> { %>
+            <div class = "eachTask">
+         
+     <a href= "/api/v1/tasks/<%= eachTask._id %>"><h2 id="taskName"> <%= eachTask.name %></h2></a>
+     <button id="deleteButton" data-doc="<%= eachTask._id %>">Delete</button>
+     <button id="updateButton" data-doc="<%= eachTask._id %>">Update</button>
+      <div class ="line"></div>
+            <% })%>
+           
+        
+        </div>
+        <br/>
+        <% } %>
+     </div>
+   
+       
+
+    </div>
+    <script>
+        //for deleting each post
+    let myBtn = document.getElementById("deleteButton");
+    myBtn.addEventListener("click", function(e){
+        let datas = myBtn.dataset.doc;
+        console.log(datas);
+    
+      let url = `/api/v1/tasks/${myBtn.dataset.doc}`;
+      fetch(url, {
+        method: "delete"
+      })
+      .then(response => response.json())
+ .then(data => window.location.href = data.redirect) //returns the URL of the current page
+ .catch(err => console.log(err));
+
+      })
+    
+      //for updating each post
+
+      //for the navigation
+
+      let nav = document.querySelector("nav");
+      let scrollHeight = window.pageYOffset;
+     window.addEventListener("scroll", function (e){
+        let navHeight = nav.getBoundingClientRect().height;
+        if(scrollHeight < navHeight){
+            nav.classList.add("fixedNav")
+        }
+        else{
+            nav.classList.remove("fixedNav")
+        }
+
+     })
+
+    </script>
+</body>
+</html>

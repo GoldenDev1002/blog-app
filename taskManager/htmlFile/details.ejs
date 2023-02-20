@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="/style.css">
+</head>
+<body>
+    
+    
+    <h1>details file</h1>
+    <p><%= detail.name %></p>
+    <input type="text" name = "name" id="nameField">
+    <p>Completed</p><input type ="checkbox" value = "<%= detail.completed %>" id="completedBox"/>
+    <button id="editBtn" data-doc="<%= detail._id %>">Edit</button>
+    
+    
+ 
+</body>
+
+<script>
+    let editBtn = document.getElementById("editBtn");
+    let nameField = document.getElementById("nameField")
+    let completedBtn = document.getElementById("completedBox");
+    editBtn.addEventListener("click", function(e){
+        let editData = editBtn.dataset.doc;
+        console.log(editData);
+     let url = `/api/v1/tasks/${editData}`;
+     let data = {
+     name: nameField.value,
+     completed : completed.value
+     }
+        fetch(url, {
+            method: "PATCH", 
+            headers : {"Content-type" : "text/html"},
+            body: JSON.stringify(data)
+ 
+         
+        })
+.then(response => response.json())
+ .then(data => window.location.href = data.redirect) //returns the URL of the current page
+ .catch(err => console.log(err));
+
+        })
+
+    </script>
+</html>
