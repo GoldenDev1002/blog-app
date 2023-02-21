@@ -8,22 +8,31 @@
     <link rel="stylesheet"  href="/style.css">
 </head>
 <body>
+    <%- include("./partials/nav.ejs") %>
     
-    
-    <h1>details file</h1>
+    <div id="details_div">
+    <h1>Details file</h1>
     <p><%= detail.name %></p>
-    <input type="text" name = "name" id="nameField">
-    <p>Completed</p><input type ="checkbox" value = "<%= detail.completed %>" id="completedBox"/>
+    <div id="name_container">
+    <h4 id="name_title">Change Name</h4><input type="text" name = "name" id="nameField">
+    </div>
+    
+    <div id="completed_container">
+    <p id="completed_title" >Completed</p><input type ="checkbox" value = "<%= detail.completed %>" id="completedBox" />
     <button id="editBtn" data-doc="<%= detail._id %>">Edit</button>
+    </div>
+
+    </div>
     
     
- 
+    <%- include("./partials/footer.ejs") %>
 </body>
 
 <script>
     let editBtn = document.getElementById("editBtn");
     let nameField = document.getElementById("nameField")
     let completedBtn = document.getElementById("completedBox");
+    let footer = document.querySelector("footer p")
     editBtn.addEventListener("click", function(e){
         let editData = editBtn.dataset.doc;
         console.log(editData);
@@ -45,5 +54,10 @@
 
         })
 
+        let dates = new Date();
+        let years = dates.getFullYear()
+        console.log(years);
+    footer.innerHTML = years;
+        
     </script>
 </html>

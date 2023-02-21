@@ -12,8 +12,9 @@ body{
 }
 nav{
     background-color: rgba(228, 228, 241, 0.648);
-    width: 109%;
+    width: 110%;
     border-bottom: 1px solid rgba(128, 128, 128, 0.219);
+    margin-bottom: 10px;
 
 }
 
@@ -57,6 +58,7 @@ a{
 
 
 .details_section{
+   
     background-color: #f33698;
     padding: 2rem;
     width: 200px;
@@ -93,6 +95,7 @@ input[type="text"]{
 #allTasks{
     display: flex;
     margin: 0 35%;
+    overflow: hidden;
 }
 
 .eachTask{
@@ -189,4 +192,70 @@ input[type="text"]{
     border-bottom: 1px solid rgba(128, 128, 128, 0.219);
     position: fixed;
     
+}
+
+#details_div{
+    width: 90%;
+    height: 800px;
+    margin: 20px 40%;
+}
+
+#name_container{
+   
+    display: flex;
+    position: absolute;
+}
+
+#completed_container {
+   
+    display: flex;
+    position: absolute;
+    top: 220px;
+} 
+
+#nameField{
+    width: 60%;
+    height: 20px;
+    position: relative;
+    top: -2px;
+    left: 30px;
+}
+
+#name_title{
+   
+    position: relative;
+    top: -15px;
+}
+
+
+
+#editBtn{
+    background-color: rgb(255, 0, 208);
+    color: white;
+    padding: .20rem;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+    border: none;
+    position: relative;  
+}
+
+footer{
+  display: flex;
+padding: 10px 45%;
+
+  background-color: rgba(228, 228, 241, 0.648);
+  width: 110%;
+  border-top: 1px solid rgba(128, 128, 128, 0.219);
+  position:absolute;
+  
+
+}
+
+footer p {
+position: relative;
+top: 5px;
+left: 5px;
 }
